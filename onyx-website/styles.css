@@ -1,0 +1,55 @@
+:root{--black:#0B0B0F;--gold:#C9A227;--purple:#5B2A86;--off:#F5F1E8;--card:#16161d;--line:#2a2a35}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Calibri,Candara,Arial,sans-serif;background:var(--black);color:var(--off);line-height:1.6}
+h1,h2,h3,.brand{font-family:Cambria,Georgia,serif;color:var(--gold);line-height:1.2}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:10;background:rgba(11,11,15,.95);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;align-items:center;gap:10px;font-size:1.3rem;letter-spacing:3px}
+.brand img{height:44px}
+nav ul{display:flex;gap:22px;list-style:none;align-items:center}
+nav a{padding:6px 2px;border-bottom:2px solid transparent}
+nav a:hover,nav a.active{border-color:var(--gold);color:var(--gold)}
+.menu-btn{display:none;background:none;border:1px solid var(--gold);color:var(--gold);font-size:1.4rem;padding:4px 12px;border-radius:8px;cursor:pointer}
+.btn{display:inline-block;background:var(--gold);color:var(--black);font-weight:700;padding:12px 26px;border-radius:12px;border:0;cursor:pointer;font-size:1rem;box-shadow:0 4px 14px rgba(201,162,39,.25)}
+.btn:hover{filter:brightness(1.1)}
+.btn.outline{background:transparent;color:var(--gold);border:1px solid var(--gold);box-shadow:none}
+nav .btn{padding:8px 18px}
+.hero{text-align:center;padding:80px 0 60px;background:radial-gradient(ellipse at top,#1d1230 0,var(--black) 65%)}
+.hero img{height:200px;margin-bottom:10px}
+.hero h1{font-size:2.8rem}
+.hero p{max-width:620px;margin:14px auto 28px;color:#d8d3c6}
+.hero .btn+.btn{margin-left:10px}
+section{padding:60px 0}
+.label{color:#a77ad6;letter-spacing:3px;font-size:.8rem;font-weight:700;text-transform:uppercase;margin-bottom:8px}
+h2{font-size:2rem;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;margin-top:26px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+.card h3{margin-bottom:8px}
+.card.vip{border-color:var(--gold)}
+.price{font-size:1.6rem;color:var(--off);font-weight:700;margin:8px 0}
+.price small{font-size:.9rem;color:#a9a496;font-weight:400}
+.badge{display:inline-block;background:var(--purple);padding:3px 12px;border-radius:20px;font-size:.75rem;margin-bottom:10px}
+ul.tick{list-style:none;margin:12px 0 18px}
+ul.tick li:before{content:"◆ ";color:var(--gold);font-size:.7rem}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+.panel{background:var(--off);color:var(--black);border-radius:16px;padding:26px}
+.panel h3{color:var(--purple)}
+form label{display:block;margin:14px 0 4px;font-weight:700;font-size:.9rem}
+input,select,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:#0f0f15;color:var(--off);font:inherit}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold)}
+.check{display:flex;align-items:center;gap:10px;margin-top:12px}
+.check input{width:auto}
+.total{margin-top:20px;background:var(--black);border:1px solid var(--gold);border-radius:14px;padding:18px}
+.total .row{display:flex;justify-content:space-between;padding:4px 0;color:#d8d3c6}
+.total .sum{border-top:1px solid var(--line);margin-top:8px;padding-top:10px;font-size:1.3rem;color:var(--gold);font-weight:700}
+.msg{margin-top:14px;padding:12px;border-radius:10px;display:none}
+.msg.ok{display:block;background:#17301d;color:#9be3ad}.msg.err{display:block;background:#3a1620;color:#f3a3b4}
+.team{text-align:center}
+.avatar{width:70px;height:70px;border-radius:50%;background:var(--purple);margin:0 auto 10px;display:grid;place-items:center;font-family:Cambria,serif;font-size:1.5rem;color:var(--gold)}
+footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:#8d8999;font-size:.9rem}
+@media(max-width:800px){.menu-btn{display:block}
+nav ul{display:none;position:absolute;top:70px;left:0;right:0;background:var(--black);flex-direction:column;padding:16px;border-bottom:1px solid var(--line)}
+nav ul.open{display:flex}.split{grid-template-columns:1fr}.hero h1{font-size:2rem}.hero .btn+.btn{margin:12px 0 0}}

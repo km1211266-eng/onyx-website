@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calculate Fees | Onyx VIP Gaming Lounge</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="index.html"><img src="assets/logo.png" alt="Onyx logo">ONYX</a>
+<nav><button class="menu-btn" id="menuBtn" aria-label="Menu">&#9776;</button>
+<ul id="navList"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="packages.html">Packages</a></li><li><a href="fees.html" class=active>Calculate Fees</a></li><li><a href="contact.html">Contact</a></li><li><a class="btn" href="fees.html?pkg=vip">Book</a></li></ul></nav>
+</div></header>
+
+<section><div class="wrap split" style="align-items:start"><div><div class="label">Fee calculator</div><h2>Plan your session</h2>
+<form onsubmit="return false">
+<label for="pkg">Package</label><select id="pkg"><option value="standard">Standard Access (R120/h)</option><option value="ultimate">Ultimate Gamer Pass (R250/h)</option><option value="vip" selected>VIP Gaming Experience (R500/h)</option></select>
+<label for="hours">Duration (hours)</label><input id="hours" type="number" min="1" max="12" value="3"><small id="minNote" style="color:#a77ad6"></small>
+<div class="check"><input type="checkbox" id="food"><label for="food" style="margin:0">Food &amp; drinks (+R250)</label></div>
+<div class="check"><input type="checkbox" id="assistant"><label for="assistant" style="margin:0">Personal gaming assistant (+R300)</label></div></form></div>
+<div class="total"><h3>Fee breakdown</h3><br>
+<div class="row"><span>Package</span><span id="rBase"></span></div>
+<div class="row"><span>Food &amp; drinks</span><span id="rFood"></span></div>
+<div class="row"><span>Assistant</span><span id="rAsst"></span></div>
+<div class="row sum"><span>Total</span><span id="rTotal"></span></div><br>
+<a class="btn" href="contact.html" style="width:100%;text-align:center">Proceed to Booking</a></div></div></section>
+<footer><div class="wrap">Onyx VIP Gaming Lounge &middot; XHAW5112 &middot; Johannesburg, South Africa<br>&copy; 2026 Onyx VIP Gaming Lounge</div></footer>
+<script src="script.js"></script></body></html>
